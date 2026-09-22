@@ -12,6 +12,9 @@
     />
   </head>
   <body>
+    <div class="announcement-banner">
+  📢 Activity registration is open until the end of the month. Don't lose your spot!
+    </div>
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
@@ -37,8 +40,13 @@
             <h3>Filter Activities</h3>
             <!-- Search Box -->
             <div class="search-box">
-              <input type="text" id="activity-search" placeholder="Search activities..." />
-              <button id="search-button" aria-label="Search">
+              <input
+                type="text"
+                id="activity-search"
+                aria-label="Search activities"
+                placeholder="Search activities..."
+              />
+              <button id="search-button" type="button" aria-label="Search">
                 <span class="search-icon">🔍</span>
               </button>
             </div>
@@ -99,10 +107,16 @@
     </footer>
 
     <!-- Registration Modal -->
-    <div id="registration-modal" class="modal hidden">
+    <div
+      id="registration-modal"
+      class="modal hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="registration-modal-title"
+    >
       <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h3>Register for <span id="modal-activity-name"></span></h3>
+        <button type="button" class="close-modal" aria-label="Close registration dialog">&times;</button>
+        <h3 id="registration-modal-title">Register for <span id="modal-activity-name"></span></h3>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -115,10 +129,16 @@
     </div>
 
     <!-- Login Modal -->
-    <div id="login-modal" class="modal hidden">
+    <div
+      id="login-modal"
+      class="modal hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="login-modal-title"
+    >
       <div class="modal-content">
-        <span class="close-login-modal">&times;</span>
-        <h3>Teacher Login</h3>
+        <button type="button" class="close-login-modal" aria-label="Close login dialog">&times;</button>
+        <h3 id="login-modal-title">Teacher Login</h3>
         <form id="login-form">
           <div class="form-group">
             <label for="username">Username:</label>

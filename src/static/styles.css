@@ -437,6 +437,8 @@ button {
   position: absolute;
   right: 12px;
   top: 8px;
+  padding: 0;
+  background: transparent;
   font-size: 18px;
   cursor: pointer;
   color: var(--text-secondary);
@@ -663,4 +665,12 @@ footer {
 
 #logout-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.announcement-banner {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
 }
